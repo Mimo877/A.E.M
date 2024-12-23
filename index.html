@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMIR Tik Tak Toe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>AMIR Tik Tak Toe</h1>
+        <div class="scoreboard">
+            <div>Spelare X: <span id="scoreX">0</span></div>
+            <div>Spelare O: <span id="scoreO">0</span></div>
+        </div>
+        <p id="message">Välj ett läge och börja spela!</p>
+        <div class="player-names">
+            <input id="playerX" type="text" placeholder="Spelare X namn">
+            <input id="playerO" type="text" placeholder="Spelare O namn">
+        </div>
+        <div class="mode-selector">
+            <button id="twoPlayerMode">2 Spelare</button>
+            <button id="aiMode">Spela mot AI</button>
+        </div>
+        <div class="difficulty">
+            <label>Välj svårighetsnivå: </label>
+            <select id="difficulty">
+                <option value="easy">Lätt</option>
+                <option value="medium" selected>Medium</option>
+                <option value="hard">Svår</option>
+            </select>
+        </div>
+        <div class="board"></div>
+        <button id="restart">Starta om</button>
+        <button id="undo">Ångra</button>
+        <button id="saveGame">Spara spel</button>
+        <button id="loadGame">Ladda spel</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

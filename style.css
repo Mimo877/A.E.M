@@ -1,0 +1,118 @@
+body {
+  font-family: "Times New Roman", Times, serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom, white, #4B0082);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+body{
+    background-image: url(background.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.game-container {
+  text-align: center;
+  background: rgba(34, 31, 35, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #6ad289;
+}
+
+.scoreboard {
+  display: flex;
+  justify-content: space-around;
+  margin: 10px 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #54c968;
+}
+
+#message {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  color: #54c968;
+}
+
+.mode-selector, .difficulty, .board-size {
+  margin-bottom: 10px;
+  color: #54c968;
+}
+
+button {
+  font-family: "Times New Roman", Times, serif;
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background: #333;
+  color: #cb1048;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #4caf50;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-gap: 10px;
+  justify-content: center;
+  margin: 20px auto;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.cell:hover {
+  transform: scale(1.1);
+}
+
+.cell.winner {
+  background: #4caf50;
+  color: white;
+  animation: winnerHighlight 1s infinite;
+}
+
+@keyframes winnerHighlight {
+  0% { background-color: #4caf50; }
+  50% { background-color: #81c784; }
+  100% { background-color: #4caf50; }
+}
+
+#restart, #undo, #saveGame, #loadGame {
+  margin-top: 10px;
+  background: #f39c12;
+  color: #fff;
+}
+
+.board-size {
+  margin-top: 10px;
+  color: #54c968;
+}
